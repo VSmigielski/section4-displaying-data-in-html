@@ -9,7 +9,42 @@
 <body>
     <form>
         Please enter your name:&nbsp;
-        <input type="text">
+        <br />
+        <input type="text" id="userInput">
+        Please enter a color:
+        <input type="color">
+        Please enter a range:
+        <input type="range">
+        Please check this:
+        <input type="checkbox">
+        Please choose a file:
+        <input type="file">
+        Please enter a date:
+        <input type="date">
+        <!-- Regular button -->
+        <button type="button" onclick="displayMessage()">button Button</button>
+        <!-- Sends information to server -->
+        <button type="submit">Submit Button</button>
+        <!-- Resets form inputs -->
+        <button type="reset">Reset Button</button>
     </form>
+
+    <!-- rows expands height, cols expands width -->
+    <textarea rows="12" cols="40">
+        Default text
+    </textarea>
+
+    <select>
+        <option>Option 1</option>
+        <option selected>Option 2</option>
+        <option disabled>Option 3</option>
+    </select>
+
+    <script>
+        function displayMessage() {
+            var text = document.getElementById("userInput").value;
+            alert(text);
+        }
+    </script>
 </body>
 </html>
